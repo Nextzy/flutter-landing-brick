@@ -14,9 +14,9 @@ RUN dart pub get
 
 WORKDIR /apps/app
 
-# # Build project
-# RUN dart pub global run jaspr_cli:jaspr build --verbose
-#
+# Build project
+RUN dart pub global run jaspr_cli:jaspr build --verbose
+
 # # This image is additionally needed for the dart runtime libs.
 # FROM dart:stable as dart
 #
