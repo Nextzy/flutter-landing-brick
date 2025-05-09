@@ -12,6 +12,8 @@ COPY . .
 RUN rm -f pubspec_overrides.yaml
 RUN dart pub get
 
+RUN cd /apps/app
+
 # Build project
 RUN dart pub global run jaspr_cli:jaspr build --verbose
 
