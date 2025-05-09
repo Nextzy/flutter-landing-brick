@@ -12,7 +12,7 @@ COPY . .
 RUN rm -f pubspec_overrides.yaml
 RUN dart pub get
 
-RUN ls
+RUN pwd
 
 # Build project
 RUN dart pub global run jaspr_cli:jaspr build --verbose
