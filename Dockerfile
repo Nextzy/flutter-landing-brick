@@ -29,6 +29,8 @@ COPY --from=dart /runtime/ /
 # Copy the build outputs for your site.
 COPY --from=build /app/apps/app/build/jaspr/ /app/apps/app/
 
+WORKDIR /app
+
 # Start the server.
 EXPOSE 8080
 CMD ["./app"]
