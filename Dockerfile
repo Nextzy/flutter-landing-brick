@@ -14,7 +14,7 @@ RUN dart pub get
 
 RUN pwd
 
-WORKDIR /app/apps
+WORKDIR /app/apps/app
 
 RUN pwd
 
