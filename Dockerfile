@@ -31,6 +31,8 @@ COPY --from=build /app/apps/app/build/jaspr/ /app/apps/app/
 
 # WORKDIR /app/apps/app
 
+RUN pwd
+
 # Start the server.
 EXPOSE 8080
 CMD ["./app"]
