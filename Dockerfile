@@ -4,7 +4,7 @@ FROM ghcr.io/cirruslabs/flutter:stable as build
 # Activate the jaspr cli.
 RUN dart pub global activate jaspr_cli
 
-WORKDIR /app/apps/app
+WORKDIR /app
 
 # Copy all files into the current image.
 COPY . .
@@ -12,6 +12,8 @@ COPY . .
 # Resolve app dependencies.
 RUN rm -f pubspec_overrides.yaml
 RUN dart pub get
+
+WORKDIR /app/apps/app
 
 # Build project
 RUN dart pub global run jaspr_cli:jaspr build --verbose
