@@ -14,6 +14,10 @@ RUN dart pub get
 
 RUN pwd
 
+WORKDIR /app/apps
+
+RUN pwd
+
 # Build project
 RUN dart pub global run jaspr_cli:jaspr build --verbose
 
