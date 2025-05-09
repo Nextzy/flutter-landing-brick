@@ -4,7 +4,7 @@ FROM ghcr.io/cirruslabs/flutter:stable as build
 # Activate the jaspr cli.
 RUN dart pub global activate jaspr_cli
 
-WORKDIR /apps/app
+WORKDIR /flutter-landing-brick-nut/apps/app
 # Copy all files into the current image.
 COPY . .
 
