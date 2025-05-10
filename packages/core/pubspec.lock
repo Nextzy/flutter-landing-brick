@@ -74,7 +74,7 @@ packages:
     source: hosted
     version: "2.0.3"
   bloc:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: bloc
       sha256: "52c10575f4445c61dd9e0cafcc6356fdd827c4c64dd7945ef3c4105f6b6ac189"
@@ -241,13 +241,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.1.2"
-  core:
-    dependency: "direct main"
-    description:
-      path: "../../packages/core"
-      relative: true
-    source: path
-    version: "0.0.1"
   crypto:
     dependency: transitive
     description:
@@ -345,9 +338,9 @@ packages:
     source: hosted
     version: "2.0.1"
   design_system:
-    dependency: "direct overridden"
+    dependency: "direct main"
     description:
-      path: "../../packages/design_system"
+      path: "../design_system"
       relative: true
     source: path
     version: "0.0.1"
@@ -592,9 +585,9 @@ packages:
     source: hosted
     version: "5.1.1"
   localization:
-    dependency: "direct overridden"
+    dependency: "direct main"
     description:
-      path: "../../packages/localization"
+      path: "../localization"
       relative: true
     source: path
     version: "0.0.1"
@@ -935,9 +928,9 @@ packages:
     source: hosted
     version: "1.1.0+2"
   utils:
-    dependency: "direct overridden"
+    dependency: "direct main"
     description:
-      path: "../../packages/utils"
+      path: "../utils"
       relative: true
     source: path
     version: "0.0.1"

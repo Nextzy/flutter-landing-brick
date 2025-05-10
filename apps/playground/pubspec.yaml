@@ -1,4 +1,4 @@
-name: app
+name: playground
 description: A new jaspr project.
 version: 0.0.1
 
@@ -6,9 +6,6 @@ environment:
   sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
-  core:
-    path: ../../packages/core
-
   jaspr: ^0.18.2
   jaspr_router: ^0.6.4
 

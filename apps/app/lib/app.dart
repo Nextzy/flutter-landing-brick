@@ -1,9 +1,6 @@
-import 'package:jaspr/jaspr.dart';
-import 'package:jaspr_router/jaspr_router.dart';
+// export 'package:core/core.dart';
 
-import 'components/header.dart';
-import 'pages/about.dart';
-import 'pages/home.dart';
+import 'package:app/lib.dart';
 
 // The main component of your application.
 //
@@ -24,8 +21,14 @@ class App extends StatelessComponent {
     yield div(classes: 'main', [
       const Header(),
       Router(routes: [
-        Route(path: '/', title: 'Home', builder: (context, state) => const Home()),
-        Route(path: '/about', title: 'About', builder: (context, state) => const About()),
+        Route(
+            path: '/',
+            title: 'Home',
+            builder: (context, state) => const Home()),
+        Route(
+            path: '/about',
+            title: 'About',
+            builder: (context, state) => const About()),
       ]),
     ]);
   }

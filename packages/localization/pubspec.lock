@@ -73,14 +73,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.3"
-  bloc:
-    dependency: transitive
-    description:
-      name: bloc
-      sha256: "52c10575f4445c61dd9e0cafcc6356fdd827c4c64dd7945ef3c4105f6b6ac189"
-      url: "https://pub.dev"
-    source: hosted
-    version: "9.0.0"
   boolean_selector:
     dependency: transitive
     description:
@@ -169,14 +161,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "8.9.5"
-  characters:
-    dependency: transitive
-    description:
-      name: characters
-      sha256: f71061c654a3380576a52b451dd5532377954cf9dbd272a78fc8479606670803
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.4.0"
   checked_yaml:
     dependency: transitive
     description:
@@ -241,13 +225,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.1.2"
-  core:
-    dependency: "direct main"
-    description:
-      path: "../../packages/core"
-      relative: true
-    source: path
-    version: "0.0.1"
   crypto:
     dependency: transitive
     description:
@@ -320,14 +297,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.1"
-  dartx:
-    dependency: transitive
-    description:
-      name: dartx
-      sha256: "8b25435617027257d43e6508b5fe061012880ddfdaa75a71d607c3de2a13d244"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.2.0"
   dds:
     dependency: transitive
     description:
@@ -344,13 +313,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.1"
-  design_system:
-    dependency: "direct overridden"
-    description:
-      path: "../../packages/design_system"
-      relative: true
-    source: path
-    version: "0.0.1"
   devtools_shared:
     dependency: transitive
     description:
@@ -543,14 +505,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.6.4"
-  jaspr_tailwind:
-    dependency: transitive
-    description:
-      name: jaspr_tailwind
-      sha256: bf76b3a90a5e9019177108f544aebe46e97cee829ec7498ff7ee02ac84e3e216
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.3.3"
   jaspr_web_compilers:
     dependency: "direct dev"
     description:
@@ -591,13 +545,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.1.1"
-  localization:
-    dependency: "direct overridden"
-    description:
-      path: "../../packages/localization"
-      relative: true
-    source: path
-    version: "0.0.1"
   logging:
     dependency: transitive
     description:
@@ -799,13 +746,21 @@ packages:
     source: hosted
     version: "2.0.1"
   slang:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: slang
       sha256: "13132690084bef34fb74dbc698a1e5496f97afbcd3eb58e20c09393e77ac46e6"
       url: "https://pub.dev"
     source: hosted
     version: "4.7.1"
+  slang_build_runner:
+    dependency: "direct dev"
+    description:
+      name: slang_build_runner
+      sha256: dac0afb5a88ddd90e59d4c71ee228e078879cffbcbeca5fae2befef3c2896dd2
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.7.0"
   source_gen:
     dependency: transitive
     description:
@@ -894,14 +849,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.7.4"
-  time:
-    dependency: transitive
-    description:
-      name: time
-      sha256: "370572cf5d1e58adcb3e354c47515da3f7469dac3a95b447117e728e7be6f461"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.1.5"
   timing:
     dependency: transitive
     description:
@@ -934,13 +881,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.0+2"
-  utils:
-    dependency: "direct overridden"
-    description:
-      path: "../../packages/utils"
-      relative: true
-    source: path
-    version: "0.0.1"
   uuid:
     dependency: transitive
     description:

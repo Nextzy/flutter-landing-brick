@@ -1,4 +1,4 @@
-name: app
+name: localization
 description: A new jaspr project.
 version: 0.0.1
 
@@ -6,11 +6,9 @@ environment:
   sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
-  core:
-    path: ../../packages/core
-
   jaspr: ^0.18.2
   jaspr_router: ^0.6.4
+  slang: ^4.7.1
 
 dev_dependencies:
   build_runner: ^2.4.15
@@ -20,6 +18,5 @@ dev_dependencies:
   jaspr_cli: ^0.18.2
   lints: ^5.1.1
 
-jaspr:
-  mode: server
+  slang_build_runner: ^4.7.0
 

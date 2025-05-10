@@ -1,4 +1,4 @@
-import 'package:jaspr/jaspr.dart';
+import 'package:app/lib.dart';
 
 // By using the @client annotation this component will be automatically compiled to javascript and mounted
 // on the client. Therefore:
