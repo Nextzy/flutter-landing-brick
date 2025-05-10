@@ -1,4 +1,4 @@
-name: change_application_name_project
+name: change_website_name
 
 packages:
   - apps/**

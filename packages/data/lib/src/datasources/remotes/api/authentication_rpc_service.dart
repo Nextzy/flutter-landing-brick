@@ -24,6 +24,7 @@ class AuthenticationRpcService extends RpcService {
               email: email,
               password: password,
             ).toJson(),
-            fromJson: RemoteAuthenticationResponse.fromJson,
+            fromResponseJson: RemoteAuthenticationResponse.fromJson,
+            fromErrorJson: ErrorResponse.fromJson,
           );
 }

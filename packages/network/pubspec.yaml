@@ -23,6 +23,6 @@ dev_dependencies:
   jaspr_cli: ^0.18.2
   lints: ^5.1.1
   retrofit_generator: ^9.1.9
-  json_serializable: ^6.9.5
+  json_serializable: ^6.9.4
 
 
