@@ -7,7 +7,7 @@
 import 'package:jaspr/server.dart';
 
 // Imports the [App] component.
-import 'app.dart';
+import 'application.dart';
 
 // This file is generated automatically by Jaspr, do not remove or edit.
 import 'jaspr_options.dart';
@@ -41,6 +41,6 @@ void main() {
         fontSize: 4.rem,
       ),
     ],
-    body: App(),
+    body: Application(),
   ));
 }

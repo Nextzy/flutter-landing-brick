@@ -5,13 +5,11 @@
 // Generated with jaspr_builder
 
 import 'package:jaspr/jaspr.dart';
-import 'package:app/pages/about.dart' as prefix0;
-import 'package:app/pages/home.dart' as prefix1;
-import 'package:app/pages/styles.dart' as prefix2;
-import 'package:app/app.dart' as prefix3;
-import 'package:design_system/widgets/counter.dart' as prefix4;
-import 'package:design_system/widgets/header.dart' as prefix5;
-import 'package:design_system/styles.dart' as prefix6;
+import 'package:app/src/presentations/about/pages/about_page.dart' as prefix0;
+import 'package:app/src/presentations/home/pages/home_page.dart' as prefix1;
+import 'package:app/application.dart' as prefix2;
+import 'package:design_system/widgets/counter.dart' as prefix3;
+import 'package:design_system/widgets/header.dart' as prefix4;
 
 /// Default [JasprOptions] for use with your jaspr project.
 ///
@@ -31,17 +29,19 @@ import 'package:design_system/styles.dart' as prefix6;
 /// ```
 final defaultJasprOptions = JasprOptions(
   clients: {
-    prefix0.About: ClientTarget<prefix0.About>('pages/about'),
+    prefix0.AboutPage: ClientTarget<prefix0.AboutPage>(
+      'src/presentations/about/pages/about_page',
+    ),
 
-    prefix1.Home: ClientTarget<prefix1.Home>('pages/home'),
+    prefix1.HomePage: ClientTarget<prefix1.HomePage>(
+      'src/presentations/home/pages/home_page',
+    ),
   },
   styles:
       () => [
-        ...prefix0.About.styles,
-        ...prefix2.PageStyle.styles,
-        ...prefix3.App.styles,
-        ...prefix4.CounterState.styles,
-        ...prefix5.Header.styles,
-        ...prefix6.DesignSystemStyle.styles,
+        ...prefix0.AboutPage.styles,
+        ...prefix2.Application.styles,
+        ...prefix3.CounterState.styles,
+        ...prefix4.Header.styles,
       ],
 );

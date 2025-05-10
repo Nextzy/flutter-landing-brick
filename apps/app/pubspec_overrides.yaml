@@ -1,7 +1,9 @@
-# melos_managed_dependency_overrides: core,design_system,localization,utils
+# melos_managed_dependency_overrides: core,design_system,localization,utils,data
 dependency_overrides:
   core:
     path: ../../packages/core
+  data:
+    path: ../../packages/data
   design_system:
     path: ../../packages/design_system
   localization:
