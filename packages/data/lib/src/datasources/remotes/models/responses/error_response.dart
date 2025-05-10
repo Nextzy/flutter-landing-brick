@@ -1,4 +1,4 @@
-import 'package:network/lib.dart';
+import 'package:data/lib.dart';
 
 part 'generated/error_response.g.dart';
 
