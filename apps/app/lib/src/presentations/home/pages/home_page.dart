@@ -6,14 +6,16 @@ import 'package:app/lib.dart';
 // - this component and any child components will be built once on the server during pre-rendering and then
 //   again on the client during normal rendering.
 @client
-class HomePage extends StatefulComponent {
-  const HomePage({super.key});
+class HomePage extends AppStatefulPage {
+  const HomePage({
+    super.key,
+  });
 
   @override
-  State<HomePage> createState() => HomeState();
+  State<HomePage> createState() => HomePageState();
 }
 
-class HomeState extends State<HomePage> {
+class HomePageState extends PageState<HomePage> {
   @override
   void initState() {
     super.initState();
@@ -29,13 +31,32 @@ class HomeState extends State<HomePage> {
   }
 
   @override
-  Iterable<Component> build(BuildContext context) sync* {
-    yield section([
-      img(src: 'images/logo.svg', width: 80),
-      h1([text('Demo')]),
-      p([text('Welcome to landing page!')]),
-      div(styles: Styles(height: 100.px), []),
-      const Counter(),
-    ]);
-  }
+  Iterable<Component> build(BuildContext context) => [
+        section([
+          img(src: 'images/logo.svg', width: 80),
+          // h1([text('Demo เดโม่')]),
+          // p([text('Welcome to landing page!')]),
+          div(
+              classes:
+                  'p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4',
+              [
+                div(classes: 'shrink-0', [
+                  img(
+                      classes: 'h-12 w-12',
+                      src: '/images/logo.svg',
+                      alt: 'Tailwind Logo'),
+                ]),
+                div([
+                  div(
+                      classes: 'text-2xl font-normal text-black',
+                      [text('Demo เดโม่')]),
+                  p(
+                      classes: 'text-slate-500',
+                      [text('Welcome to landing page!')]),
+                ])
+              ]),
+          div(styles: Styles(height: 100.px), []),
+          const Counter(),
+        ]),
+      ];
 }

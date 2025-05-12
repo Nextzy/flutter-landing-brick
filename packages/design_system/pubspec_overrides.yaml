@@ -1,6 +1,12 @@
-# melos_managed_dependency_overrides: localization,utils
+# melos_managed_dependency_overrides: localization,utils,core,data,network
 dependency_overrides:
+  core:
+    path: ../core
+  data:
+    path: ../data
   localization:
     path: ../localization
+  network:
+    path: ../network
   utils:
     path: ../utils

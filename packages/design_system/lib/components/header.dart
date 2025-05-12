@@ -11,7 +11,7 @@ class Header extends StatelessComponent {
       nav([
         for (var route in [
           (label: 'Home', path: '/'),
-          (label: 'About', path: '/about'),
+          (label: 'Policy', path: '/about'),
         ])
           div(classes: activePath == route.path ? 'active' : null, [
             Link(to: route.path, child: text(route.label)),
@@ -21,7 +21,7 @@ class Header extends StatelessComponent {
   }
 
   @css
-  static final styles = [
+  static final List<StyleRule> styles = [
     css('header', [
       css('&').styles(
         display: Display.flex,

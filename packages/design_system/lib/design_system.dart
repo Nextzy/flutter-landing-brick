@@ -1,3 +1,4 @@
-export 'widgets/widgets.dart';
-export 'constants/theme.dart';
+export 'components/components.dart';
+export 'themes/themes.dart';
+export 'models/models.dart';
 

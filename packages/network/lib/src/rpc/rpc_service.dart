@@ -2,11 +2,11 @@ import 'package:network/lib.dart';
 
 abstract class RpcService {
   const RpcService(
-      this._dio, {
-        this.baseUrl,
-        this.jsonrpc = 'Nextzy',
-        this.errorLogger,
-      });
+    this._dio, {
+    this.baseUrl,
+    this.jsonrpc = 'Nextzy',
+    this.errorLogger,
+  });
 
   final Dio _dio;
   final String? baseUrl;
@@ -14,18 +14,18 @@ abstract class RpcService {
   final ParseErrorLogger? errorLogger;
 
   Future<JsonRpcResponse<DATA, ERROR>> request<DATA, ERROR>(
-      String path, {
-        String? jsonrpc,
-        required String method,
-        Map<String, dynamic>? params,
-        String? id,
-        String? mockId,
-        DATA Function(Map<String, dynamic> json)? fromResponseJson,
-        ERROR Function(Map<String, dynamic> json)? fromErrorJson,
-        Map<String, dynamic>? queryParameters,
-        Map<String, dynamic>? headers,
-        Map<String, dynamic>? extra,
-      }) async {
+    String path, {
+    String? jsonrpc,
+    required String method,
+    Map<String, dynamic>? params,
+    String? id,
+    String? mockId,
+    DATA Function(Map<String, dynamic> json)? fromResponseJson,
+    ERROR Function(Map<String, dynamic> json)? fromErrorJson,
+    Map<String, dynamic>? queryParameters,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+  }) async {
     queryParameters?.removeWhere((k, v) => v == null);
     final Map<String, Object?> body = {
       'jsonrpc': jsonrpc ?? this.jsonrpc,
@@ -38,11 +38,11 @@ abstract class RpcService {
     final options = _setStreamType<JsonRpcResponse<DATA, ERROR>>(
       Options(method: 'POST', headers: headers, extra: extra)
           .compose(
-        _dio.options,
-        path,
-        queryParameters: queryParameters,
-        data: body,
-      )
+            _dio.options,
+            path,
+            queryParameters: queryParameters,
+            data: body,
+          )
           .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
     );
     final fetchResult = await _dio.fetch<Map<String, dynamic>>(options);
@@ -57,14 +57,14 @@ abstract class RpcService {
         result: result is Map<String, dynamic>
             ? fromResponseJson!(result)
             : result != null
-            ? fromResponseJson!({
-          'result': result,
-        })
-            : null,
+                ? fromResponseJson!({
+                    'result': result,
+                  })
+                : null,
         error: error != null
             ? fromErrorJson != null
-            ? fromErrorJson(error as Map<String, dynamic>)
-            : error
+                ? fromErrorJson(error as Map<String, dynamic>)
+                : error
             : null,
       );
     } on Object catch (e, s) {
@@ -75,12 +75,12 @@ abstract class RpcService {
   }
 
   void notifySync(
-      String path, {
-        String? jsonrpc,
-        required String method,
-        String? mockId,
-        Map<String, dynamic>? params,
-      }) =>
+    String path, {
+    String? jsonrpc,
+    required String method,
+    String? mockId,
+    Map<String, dynamic>? params,
+  }) =>
       notify(
         path,
         jsonrpc: jsonrpc,
@@ -90,12 +90,12 @@ abstract class RpcService {
       );
 
   Future<void> notify(
-      String path, {
-        String? jsonrpc,
-        required String method,
-        String? mockId,
-        Map<String, dynamic>? params,
-      }) async {
+    String path, {
+    String? jsonrpc,
+    required String method,
+    String? mockId,
+    Map<String, dynamic>? params,
+  }) async {
     final extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     queryParameters.removeWhere((k, v) => v == null);
@@ -110,11 +110,11 @@ abstract class RpcService {
     final options = _setStreamType(
       Options(method: 'POST', headers: headers, extra: extra)
           .compose(
-        _dio.options,
-        path,
-        queryParameters: queryParameters,
-        data: data,
-      )
+            _dio.options,
+            path,
+            queryParameters: queryParameters,
+            data: data,
+          )
           .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
     );
     await _dio.fetch<Map<String, dynamic>>(options);
@@ -122,9 +122,9 @@ abstract class RpcService {
 
   //TODO: Need research
   Future<List<JsonRpcResponse>> batch(
-      String path, {
-        required List<BatchJsonRpcBody> bodyList,
-      }) async {
+    String path, {
+    required List<BatchJsonRpcBody> bodyList,
+  }) async {
     final extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final headers = <String, dynamic>{};

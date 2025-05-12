@@ -1,6 +1,4 @@
-import 'package:jaspr/jaspr.dart';
-
-import '../constants/theme.dart';
+import 'package:design_system/lib.dart';
 
 class Counter extends StatefulComponent {
   const Counter({super.key});
@@ -32,7 +30,7 @@ class CounterState extends State<Counter> {
   }
 
   @css
-  static final styles = [
+  static final List<StyleRule> styles = [
     css('.counter', [
       css('&').styles(
         display: Display.flex,

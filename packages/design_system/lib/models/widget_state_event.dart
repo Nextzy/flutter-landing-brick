@@ -1,4 +1,4 @@
-import 'package:data/lib.dart';
+import 'package:design_system/lib.dart';
 
 enum FullWidgetState {
   initial,
@@ -17,37 +17,77 @@ enum FullWidgetState {
   warning,
   fail;
 
-  bool get isInitial => this == FullWidgetState.initial;
-  bool get isNormal => this == FullWidgetState.normal;
-  bool get isEmpty => this == FullWidgetState.empty;
-  bool get isHovered => this == FullWidgetState.hovered;
-  bool get isFocused => this == FullWidgetState.focused;
-  bool get isPressed => this == FullWidgetState.pressed;
-  bool get isDragged => this == FullWidgetState.dragged;
-  bool get isSelected => this == FullWidgetState.selected;
-  bool get isScrolledUnder => this == FullWidgetState.scrolledUnder;
-  bool get isDisabled => this == FullWidgetState.disabled;
-  bool get isLoading => this == FullWidgetState.loading;
-  bool get isSuccess => this == FullWidgetState.success;
-  bool get isFail => this == FullWidgetState.fail;
-  bool get isWarning => this == FullWidgetState.warning;
-  bool get isCancel => this == FullWidgetState.cancel;
+  bool get isInitial => this == FullWidgetState.initial; //
+  bool get isNormal => this == FullWidgetState.normal; //
+  bool get isEmpty => this == FullWidgetState.empty; //
+  bool get isHovered => this == FullWidgetState.hovered; //
+  bool get isFocused => this == FullWidgetState.focused; //
+  bool get isPressed => this == FullWidgetState.pressed; //
+  bool get isDragged => this == FullWidgetState.dragged; //
+  bool get isSelected => this == FullWidgetState.selected; //
+  bool get isScrolledUnder => this == FullWidgetState.scrolledUnder; //
+  bool get isDisabled => this == FullWidgetState.disabled; //
+  bool get isLoading => this == FullWidgetState.loading; //
+  bool get isSuccess => this == FullWidgetState.success; //
+  bool get isFail => this == FullWidgetState.fail; //
+  bool get isWarning => this == FullWidgetState.warning; //
+  bool get isCancel => this == FullWidgetState.cancel; //
 
-  bool get isNotInitial => !isInitial;
-  bool get isNotNormal => !isNormal;
-  bool get isNotEmpty => !isEmpty;
-  bool get isNotHovered => !isHovered;
-  bool get isNotFocused => !isFocused;
-  bool get isNotPressed => !isPressed;
-  bool get isNotDragged => !isDragged;
-  bool get isNotSelected => !isSelected;
-  bool get isNotScrolledUnder => !isScrolledUnder;
-  bool get isNotDisabled => !isDisabled;
-  bool get isNotLoading => !isLoading;
-  bool get isNotSuccess => !isSuccess;
-  bool get isNotFail => !isFail;
-  bool get isNotWarning => !isWarning;
-  bool get isNotCancel => !isCancel;
+  bool get isNotInitial => !isInitial; //
+  bool get isNotNormal => !isNormal; //
+  bool get isNotEmpty => !isEmpty; //
+  bool get isNotHovered => !isHovered; //
+  bool get isNotFocused => !isFocused; //
+  bool get isNotPressed => !isPressed; //
+  bool get isNotDragged => !isDragged; //
+  bool get isNotSelected => !isSelected; //
+  bool get isNotScrolledUnder => !isScrolledUnder; //
+  bool get isNotDisabled => !isDisabled; //
+  bool get isNotLoading => !isLoading; //
+  bool get isNotSuccess => !isSuccess; //
+  bool get isNotFail => !isFail; //
+  bool get isNotWarning => !isWarning; //
+  bool get isNotCancel => !isCancel; //
+
+  @decoder
+  static FullWidgetState fromJson(Map<String, dynamic> json) =>
+      switch (json['state']) {
+        'initial' => initial,
+        'normal' => normal,
+        'empty' => empty,
+        'hovered' => hovered,
+        'focused' => focused,
+        'pressed' => pressed,
+        'dragged' => dragged,
+        'selected' => selected,
+        'scrolledUnder' => scrolledUnder,
+        'disabled' => disabled,
+        'loading' => loading,
+        'success' => success,
+        'cancel' => cancel,
+        'warning' => warning,
+        'fail' => fail,
+        _ => normal,
+      };
+
+  @encoder
+  Map<String, dynamic> toJson() => switch (this) {
+        FullWidgetState.initial => {'state': 'initial'},
+        FullWidgetState.normal => {'state': 'normal'},
+        FullWidgetState.empty => {'state': 'empty'},
+        FullWidgetState.hovered => {'state': 'hovered'},
+        FullWidgetState.focused => {'state': 'focused'},
+        FullWidgetState.pressed => {'state': 'pressed'},
+        FullWidgetState.dragged => {'state': 'dragged'},
+        FullWidgetState.selected => {'state': 'selected'},
+        FullWidgetState.scrolledUnder => {'state': 'scrolledUnder'},
+        FullWidgetState.disabled => {'state': 'disabled'},
+        FullWidgetState.loading => {'state': 'loading'},
+        FullWidgetState.success => {'state': 'success'},
+        FullWidgetState.cancel => {'state': 'cancel'},
+        FullWidgetState.warning => {'state': 'warning'},
+        FullWidgetState.fail => {'state': 'fail'},
+      };
 }
 
 @immutable
@@ -160,38 +200,67 @@ class WidgetStateEvent<DATA> {
   final bool build;
 
   bool get isInitial => state.isInitial;
+
   bool get isNormal => state.isNormal;
+
   bool get isEmpty => state.isEmpty;
+
   bool get isHovered => state.isHovered;
+
   bool get isFocused => state.isFocused;
+
   bool get isPressed => state.isPressed;
+
   bool get isDragged => state.isDragged;
+
   bool get isSelected => state.isSelected;
+
   bool get isScrolledUnder => state.isScrolledUnder;
+
   bool get isDisabled => state.isDisabled;
+
   bool get isLoading => state.isLoading;
+
   bool get isSuccess => state.isSuccess;
+
   bool get isFail => state.isFail;
+
   bool get isWarning => state.isWarning;
+
   bool get isCancel => state.isCancel;
 
   bool get isNotInitial => !isInitial;
+
   bool get isNotNormal => !isNormal;
+
   bool get isNotEmpty => !isEmpty;
+
   bool get isNotHovered => !isHovered;
+
   bool get isNotFocused => !isFocused;
+
   bool get isNotPressed => !isPressed;
+
   bool get isNotDragged => !isDragged;
+
   bool get isNotSelected => !isSelected;
+
   bool get isNotScrolledUnder => !isScrolledUnder;
+
   bool get isNotDisabled => !isDisabled;
+
   bool get isNotLoading => !isLoading;
+
   bool get isNotSuccess => !isSuccess;
+
   bool get isNotFail => !isFail;
+
   bool get isNotWarning => !isWarning;
+
   bool get isNotCancel => !isCancel;
 
   bool get hasData => data != null;
+
   bool get noData => data == null;
 
   R apply<R>(Function2<FullWidgetState, DATA, R> f) => f(state, data);
