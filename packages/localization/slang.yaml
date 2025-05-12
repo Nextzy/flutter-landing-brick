@@ -4,3 +4,4 @@ translate_var: Strings
 output_directory: lib/generated
 output_file_name: localization.g.dart
 input_file_pattern: .i18n.csv
+flutter_integration: false
