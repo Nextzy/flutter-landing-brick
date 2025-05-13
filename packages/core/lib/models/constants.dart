@@ -1,6 +1,6 @@
 import 'package:jaspr/jaspr.dart';
 
-enum WidgetSize { xxs, xs, sm, md, lg, xl, xxl }
+enum WidgetSize { micro, tiny, small, medium, large, huge, giant }
 
 enum FontSize { s10, s12, s14, s16, s18, s24, s36, custom }
 

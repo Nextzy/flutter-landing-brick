@@ -3,7 +3,7 @@ import 'package:core/lib.dart';
 abstract class AppStatefulComponent extends StatefulComponent {
   const AppStatefulComponent({
     super.key,
-    this.size = WidgetSize.md,
+    this.size = WidgetSize.medium,
     this.themeMode,
     this.state = FullWidgetState.normal,
     this.focused = false,
