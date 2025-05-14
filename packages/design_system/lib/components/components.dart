@@ -1,5 +1,6 @@
 export 'counter.dart';
 export 'header.dart';
+export 'texts/text.dart';
 export 'buttons/buttons.dart';
 export 'navigations/navigations.dart';
 export 'layouts/layouts.dart';

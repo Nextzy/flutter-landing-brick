@@ -20,9 +20,12 @@ import 'package:design_system/components/navigations/top_navigation.dart'
     as prefix10;
 import 'package:design_system/components/navigations/top_navigation_menu.dart'
     as prefix11;
-import 'package:design_system/components/counter.dart' as prefix12;
-import 'package:design_system/components/header.dart' as prefix13;
-import 'package:design_system/components/slot.dart' as prefix14;
+import 'package:design_system/components/text_inputs/text_area.dart'
+    as prefix12;
+import 'package:design_system/components/texts/text.dart' as prefix13;
+import 'package:design_system/components/counter.dart' as prefix14;
+import 'package:design_system/components/header.dart' as prefix15;
+import 'package:design_system/components/slot.dart' as prefix16;
 
 /// Default [JasprOptions] for use with your jaspr project.
 ///
@@ -63,10 +66,11 @@ final defaultJasprOptions = JasprOptions(
         ...prefix9.PageLayout.styles,
         ...prefix10.AppTopNavigation.styles,
         ...prefix11.AppTopNavigationMenuState.styles,
+        ...prefix12.AppTextAreaState.styles,
+        ...prefix13.AppText.styles,
+        ...prefix14.CounterState.styles,
+        ...prefix15.Header.styles,
 
-        ...prefix12.CounterState.styles,
-        ...prefix13.Header.styles,
-
-        ...prefix14.Slot.styles,
+        ...prefix16.Slot.styles,
       ],
 );
