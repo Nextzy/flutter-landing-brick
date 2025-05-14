@@ -4,14 +4,16 @@ class AppText extends AppStatelessComponent {
   const AppText(
     this.data, {
     super.key,
+    this.classes,
   });
 
   final String data;
+  final String? classes;
 
   @override
   Iterable<Component> build(BuildContext context) => [
         div(
-          classes: 'text-2xl font-normal text-white',
+          classes: classes,
           [text(data)],
         ),
       ];
