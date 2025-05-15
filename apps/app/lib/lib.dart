@@ -3,3 +3,4 @@ export 'package:jaspr_router/jaspr_router.dart';
 export 'package:core/core.dart';
 export 'package:app/src/src.dart';
 export 'package:app/routers.dart';
+export 'design_system/design_system.dart';
