@@ -48,21 +48,15 @@ class HomePageState extends PageState<HomePage> {
                 ]),
                 div([
                   div(
-                      classes: 'text-2xl font-normal text-white',
-                      [text('Demo เดโม')]),
+                      classes: 'text-2xl font-normal text-black',
+                      [text('Demo เดโม่')]),
                   p(
                       classes: 'text-slate-500',
                       [text('Welcome to landing page!')]),
-                ]),
+                ])
               ]),
           div(styles: Styles(height: 100.px), []),
           const Counter(),
-          span(
-            attributes: {'style': 'color: red;'},
-            [text('This text is red!')],
-          ),
-          AppText('hello world'),
-          AppButton(label: 'label'),
         ]),
       ];
 }
