@@ -575,6 +575,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.6.4"
+  jaspr_tailwind:
+    dependency: "direct main"
+    description:
+      name: jaspr_tailwind
+      sha256: bf76b3a90a5e9019177108f544aebe46e97cee829ec7498ff7ee02ac84e3e216
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.3.3"
   jaspr_web_compilers:
     dependency: "direct dev"
     description:

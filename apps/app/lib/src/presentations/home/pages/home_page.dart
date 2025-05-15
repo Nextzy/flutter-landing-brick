@@ -48,7 +48,7 @@ class HomePageState extends PageState<HomePage> {
                 ]),
                 div([
                   div(
-                      classes: 'text-2xl font-normal text-black',
+                      classes: 'text-2xl font-normal text-white',
                       [text('Demo เดโม')]),
                   p(
                       classes: 'text-slate-500',
@@ -56,15 +56,12 @@ class HomePageState extends PageState<HomePage> {
                 ]),
               ]),
           div(styles: Styles(height: 100.px), []),
-          // const Counter(),
-          div(
-            classes: 'text-2xl font-normal text-blue-500',
-            [text('test1')],
+          const Counter(),
+          span(
+            attributes: {'style': 'color: red;'},
+            [text('This text is red!')],
           ),
-          AppText(
-            'hello world',
-            classes: 'text-3xl font-normal text-red-500',
-          ),
+          AppText('hello world'),
           AppButton(label: 'label'),
         ]),
       ];
