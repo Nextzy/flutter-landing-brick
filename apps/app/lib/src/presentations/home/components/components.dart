@@ -1,2 +1,9 @@
 export 'molecules/molecules.dart';
 export 'home_body.dart';
+export 'hero_section.dart';
+export 'logo_cloud_section.dart';
+export 'feature_section_1.dart';
+export 'feature_section_2.dart';
+export 'stats_section.dart';
+export 'cta_section.dart';
+export 'footer.dart';
