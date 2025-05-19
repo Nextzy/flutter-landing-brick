@@ -47,19 +47,39 @@ class AppButtonState extends ComponentState<AppButton> {
   }
 
   Component buildBrand(BuildContext context) {
-    // TODO: Handle this case.
-    return div([]);
+    return button(
+      classes: ''
+          'bg-button-primary hover:bg-button-primary-hover active:bg-button-primary-active '
+          'text-text-primary-on-color px-20 py-10 rounded '
+          'focus:outline-2 focus:outline-offset-2 focus:outline-button-primary '
+          '',
+      events: {
+        'click': (_) => print('Button clicked!'),
+      },
+      [text(label)],
+    );
   }
 
   Component buildFilled(BuildContext context) {
-    // TODO: Handle this case.
-    return div([]);
+    return button(
+      classes:
+          'bg-button-filled text-white px-4 py-2 rounded hover:bg-blue-500',
+      events: {
+        'click': (_) => print('Button clicked!'),
+      },
+      [text(label)],
+    );
   }
 
   Component buildDestructive(BuildContext context) {
-    // TODO: Handle this case.
-
-    return div([]);
+    return button(
+      classes:
+          'bg-button-destructive-active text-white px-4 py-2 rounded hover:bg-blue-500',
+      events: {
+        'click': (_) => print('Button clicked!'),
+      },
+      [text(label)],
+    );
   }
 
   Component buildOutlined(BuildContext context) {

@@ -10,5 +10,9 @@ class AppRouter {
         path: '/about',
         title: 'About',
         builder: (context, state) => const AboutPage()),
+    Route(
+        path: '/landing',
+        title: 'Landing',
+        builder: (context, state) => const HomePage()),
   ]);
 }
