@@ -14,11 +14,8 @@ class CtaSection extends AppStatelessComponent {
     return div(
       classes: 'relative isolate mt-32 px-6 py-32 sm:mt-56 sm:py-40 lg:px-8',
       [
-        div(
-          classes:
-              'absolute inset-x-0 top-10 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl',
-          [],
-        ),
+        _buildBackground1(),
+        _buildBackground2(),
         div(
           classes: 'mx-auto max-w-2xl text-center',
           [
@@ -60,6 +57,83 @@ class CtaSection extends AppStatelessComponent {
             ),
           ],
         ),
+      ],
+    );
+  }
+
+  Component _buildBackground1() {
+    return svg(
+      classes:
+          'absolute inset-0 -z-10 size-full mask-[radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-white/10',
+      attributes: {
+        'aria-hidden': 'true',
+      },
+      [
+        DomComponent(
+          tag: 'defs',
+          children: [
+            DomComponent(
+              tag: 'pattern',
+              id: '1d4240dd-898f-445f-932d-e2872fd12de3',
+              attributes: {
+                'width': '200',
+                'height': '200',
+                'x': '50%',
+                'y': '0',
+                'patternUnits': 'userSpaceOnUse',
+              },
+              children: [
+                path(
+                  d: 'M.5 200V.5H200',
+                  attributes: {
+                    'fill': 'none',
+                  },
+                  [],
+                )
+              ],
+            ),
+          ],
+        ),
+        svg(
+          classes: 'overflow-visible fill-gray-800/20',
+          attributes: {
+            'x': '50%',
+            'y': '0',
+          },
+          [
+            path(
+              d: 'M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z',
+              strokeWidth: '0',
+              [],
+            ),
+          ],
+        ),
+        rect(
+          width: '100%',
+          height: '100%',
+          strokeWidth: '0',
+          attributes: {
+            'fill': 'url(#1d4240dd-898f-445f-932d-e2872fd12de3)',
+          },
+          [],
+        ),
+      ],
+    );
+  }
+
+  Component _buildBackground2() {
+    return div(
+      classes:
+          'absolute inset-x-0 top-10 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl',
+      attributes: {
+        'aria-hidden': 'true',
+      },
+      [
+        div(
+          classes:
+              'aspect-1108/632 w-277 flex-none bg-linear-to-r from-[#80caff] to-[#4f46e5] opacity-20',
+          [], //todo add polygon
+        )
       ],
     );
   }
