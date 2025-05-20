@@ -40,82 +40,47 @@ class StatsSection extends AppStatelessComponent {
           classes:
               'mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-white sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4',
           children: [
-            div(
-              classes: 'flex flex-col gap-y-3 border-l border-white/10 pl-6',
-              [
-                DomComponent(
-                  tag: 'dt',
-                  classes: 'text-sm/6',
-                  children: [
-                    Text('Developers on the platform'),
-                  ],
-                ),
-                DomComponent(
-                  tag: 'dd',
-                  classes: 'order-first text-3xl font-semibold tracking-tight',
-                  children: [
-                    Text('8,000+'),
-                  ],
-                ),
-              ],
+            _buildStatListContainer(
+              term: 'Developers on the platform',
+              description: '8,000+',
             ),
-            div(
-              classes: 'flex flex-col gap-y-3 border-l border-white/10 pl-6',
-              [
-                DomComponent(
-                  tag: 'dt',
-                  classes: 'text-sm/6',
-                  children: [
-                    Text('Daily requests'),
-                  ],
-                ),
-                DomComponent(
-                  tag: 'dd',
-                  classes: 'order-first text-3xl font-semibold tracking-tight',
-                  children: [
-                    Text('900m+'),
-                  ],
-                ),
-              ],
+            _buildStatListContainer(
+              term: 'Daily requests',
+              description: '900m+',
             ),
-            div(
-              classes: 'flex flex-col gap-y-3 border-l border-white/10 pl-6',
-              [
-                DomComponent(
-                  tag: 'dt',
-                  classes: 'text-sm/6',
-                  children: [
-                    Text('Uptime guarantee'),
-                  ],
-                ),
-                DomComponent(
-                  tag: 'dd',
-                  classes: 'order-first text-3xl font-semibold tracking-tight',
-                  children: [
-                    Text('99.9%'),
-                  ],
-                ),
-              ],
+            _buildStatListContainer(
+              term: 'Uptime guarantee',
+              description: '99.9%',
             ),
-            div(
-              classes: 'flex flex-col gap-y-3 border-l border-white/10 pl-6',
-              [
-                DomComponent(
-                  tag: 'dt',
-                  classes: 'text-sm/6',
-                  children: [
-                    Text('Projects deployed'),
-                  ],
-                ),
-                DomComponent(
-                  tag: 'dd',
-                  classes: 'order-first text-3xl font-semibold tracking-tight',
-                  children: [
-                    Text('12m'),
-                  ],
-                ),
-              ],
+            _buildStatListContainer(
+              term: 'Projects deployed',
+              description: '12m',
             ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  Component _buildStatListContainer({
+    required String term,
+    required String description,
+  }) {
+    return div(
+      classes: 'flex flex-col gap-y-3 border-l border-white/10 pl-6',
+      [
+        DomComponent(
+          tag: 'dt',
+          classes: 'text-sm/6',
+          children: [
+            Text(term),
+          ],
+        ),
+        DomComponent(
+          tag: 'dd',
+          classes: 'order-first text-3xl font-semibold tracking-tight',
+          children: [
+            Text(description),
           ],
         ),
       ],
