@@ -113,26 +113,7 @@ class HeroSection extends AppStatelessComponent {
             ),
           ],
         ),
-        div(
-          classes:
-              'mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:mt-0 lg:mr-0 lg:ml-10 lg:max-w-none lg:flex-none xl:ml-32',
-          [
-            div(
-              classes: 'max-w-3xl flex-none sm:max-w-5xl lg:max-w-none',
-              [
-                img(
-                  classes:
-                      'w-304 rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10',
-                  src:
-                      'https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png',
-                  alt: 'App screenshot',
-                  width: 2432,
-                  height: 1442,
-                ),
-              ],
-            ),
-          ],
-        ),
+        _buildAppScreenshotImage(),
       ],
     );
   }
@@ -207,6 +188,29 @@ class HeroSection extends AppStatelessComponent {
               'aspect-1108/632 w-277 bg-linear-to-r from-[#80caff] to-[#4f46e5] opacity-20',
           [], //todo add polygon
         )
+      ],
+    );
+  }
+
+  Component _buildAppScreenshotImage() {
+    return div(
+      classes:
+          'mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:mt-0 lg:mr-0 lg:ml-10 lg:max-w-none lg:flex-none xl:ml-32',
+      [
+        div(
+          classes: 'max-w-3xl flex-none sm:max-w-5xl lg:max-w-none',
+          [
+            img(
+              classes:
+                  'w-304 rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10',
+              src:
+                  'https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png',
+              alt: 'App screenshot',
+              width: 2432,
+              height: 1442,
+            ),
+          ],
+        ),
       ],
     );
   }
