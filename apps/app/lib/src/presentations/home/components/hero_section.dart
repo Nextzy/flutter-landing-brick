@@ -205,7 +205,7 @@ class HeroSection extends AppStatelessComponent {
         div(
           classes:
               'aspect-1108/632 w-277 bg-linear-to-r from-[#80caff] to-[#4f46e5] opacity-20',
-          [],
+          [], //todo add polygon
         )
       ],
     );

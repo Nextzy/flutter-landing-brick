@@ -44,7 +44,7 @@ class HomePageState extends PageState<HomePage> {
         main_(
           [
             HeroSection(),
-            LogoCloud(),
+            LogoCloudSection(),
             FeatureSection1(),
             FeatureSection2(),
             StatsSection(),
