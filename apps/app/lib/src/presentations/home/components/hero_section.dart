@@ -53,7 +53,7 @@ class HeroSection extends AppStatelessComponent {
                               viewBox: '0 0 20 20',
                               attributes: {
                                 'fill': 'currentColor',
-                                'area-hidden': 'true',
+                                'aria-hidden': 'true',
                                 'data-slot': 'icon',
                               },
                               [
@@ -101,7 +101,7 @@ class HeroSection extends AppStatelessComponent {
                       [
                         span(
                           attributes: {
-                            'area-hidden': 'true',
+                            'aria-hidden': 'true',
                           },
                           [text('Learn more '), text('→')],
                         ),
@@ -142,7 +142,7 @@ class HeroSection extends AppStatelessComponent {
       classes:
           'absolute inset-0 -z-10 size-full mask-[radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-white/10',
       attributes: {
-        'area-hidden': 'true',
+        'aria-hidden': 'true',
       },
       [
         DomComponent(

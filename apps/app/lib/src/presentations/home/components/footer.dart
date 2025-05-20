@@ -12,14 +12,14 @@ class Footer extends AppStatelessComponent {
 
   Component _buildBody() {
     return footer(
-      classes: 'mx-auto max-w-7xl lg:px-8',
+      classes: 'mx-auto max-w-7xl px-6 lg:px-8',
       [
         div(
           classes:
               'border-t border-white/10 py-12 md:flex md:items-center md:justify-between',
           [
             div(
-              classes: 'flex justify-center gap-x-6 text-white md:order-2',
+              classes: 'flex justify-center gap-x-6 md:order-2',
               [
                 _buildSocialLink(
                   socialName: 'Facebook',
@@ -77,7 +77,7 @@ class Footer extends AppStatelessComponent {
           classes: 'size-6',
           attributes: {
             'fill': 'currentColor',
-            'area-hidden': 'true',
+            'aria-hidden': 'true',
           },
           viewBox: '0 0 24 24',
           [
