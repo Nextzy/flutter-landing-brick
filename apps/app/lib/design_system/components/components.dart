@@ -9,3 +9,4 @@ export 'text_inputs/text_inputs.dart';
 export 'slot.dart';
 export 'constants.dart';
 export 'badges_tags/badges_tags.dart';
+export 'html_content.dart';

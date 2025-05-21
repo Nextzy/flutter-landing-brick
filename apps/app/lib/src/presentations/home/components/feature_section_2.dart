@@ -88,11 +88,10 @@ class FeatureSection2 extends AppStatelessComponent {
     return div(
       classes: 'mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8',
       [
-        DomComponent(
-          tag: 'dl',
+        dl(
           classes:
               'mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base/7 text-gray-300 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16',
-          children: [
+          [
             _buildFeatureListContainer(
               iconShape:
                   'M5.5 17a4.5 4.5 0 0 1-1.44-8.765 4.5 4.5 0 0 1 8.302-3.046 3.5 3.5 0 0 1 4.504 4.272A4 4 0 0 1 15 17H5.5Zm3.75-2.75a.75.75 0 0 0 1.5 0V9.66l1.95 2.1a.75.75 0 1 0 1.1-1.02l-3.25-3.5a.75.75 0 0 0-1.1 0l-3.25 3.5a.75.75 0 1 0 1.1 1.02l1.95-2.1v4.59Z',
@@ -150,10 +149,9 @@ class FeatureSection2 extends AppStatelessComponent {
     return div(
       classes: 'relative pl-9',
       [
-        DomComponent(
-          tag: 'dt',
+        dt(
           classes: 'inline font-semibold text-white',
-          children: [
+          [
             svg(
               classes: 'absolute top-1 left-1 size-5 text-indigo-500',
               attributes: {
@@ -176,10 +174,9 @@ class FeatureSection2 extends AppStatelessComponent {
             Text(term),
           ],
         ),
-        DomComponent(
-          tag: 'dd',
+        dd(
           classes: 'inline',
-          children: [Text(description)],
+          [Text(description)],
         ),
       ],
     );

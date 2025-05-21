@@ -29,11 +29,9 @@ class HeroSection extends AppStatelessComponent {
         'aria-hidden': 'true',
       },
       [
-        DomComponent(
-          tag: 'defs',
-          children: [
-            DomComponent(
-              tag: 'pattern',
+        defs(
+          [
+            pattern(
               id: '983e3e4c-de6d-4c3f-8d64-b9761d1534cc',
               attributes: {
                 'width': '200',
@@ -42,14 +40,14 @@ class HeroSection extends AppStatelessComponent {
                 'y': '-1',
                 'patternUnits': 'userSpaceOnUse',
               },
-              children: [
+              [
                 path(
                   d: 'M.5 200V.5H200',
                   attributes: {
                     'fill': 'none',
                   },
                   [],
-                )
+                ),
               ],
             ),
           ],

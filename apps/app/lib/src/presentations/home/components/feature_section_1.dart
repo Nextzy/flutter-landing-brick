@@ -48,11 +48,10 @@ class FeatureSection1 extends AppStatelessComponent {
     return div(
       classes: 'mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none',
       [
-        DomComponent(
-          tag: 'dl',
+        dl(
           classes:
               'grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3',
-          children: [
+          [
             _buildFeatureListContainer(
               iconShape:
                   'm3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z',
@@ -88,10 +87,9 @@ class FeatureSection1 extends AppStatelessComponent {
     return div(
       classes: 'flex flex-col',
       [
-        DomComponent(
-          tag: 'dt',
+        dt(
           classes: 'text-base/7 font-semibold text-white',
-          children: [
+          [
             div(
               classes:
                   'mb-6 flex size-10 items-center justify-center rounded-lg bg-indigo-500',
@@ -122,10 +120,9 @@ class FeatureSection1 extends AppStatelessComponent {
             Text(term),
           ],
         ),
-        DomComponent(
-          tag: 'dd',
+        dd(
           classes: 'mt-1 flex flex-auto flex-col text-base/7 text-gray-300',
-          children: [
+          [
             p(
               classes: 'flex-auto',
               [text(description)],

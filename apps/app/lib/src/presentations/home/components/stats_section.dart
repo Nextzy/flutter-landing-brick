@@ -44,12 +44,11 @@ class StatsSection extends AppStatelessComponent {
     );
   }
 
-  DomComponent _buildStatList() {
-    return DomComponent(
-      tag: 'dl',
+  Component _buildStatList() {
+    return dl(
       classes:
           'mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-white sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4',
-      children: [
+      [
         _buildStatListContainer(
           term: 'Developers on the platform',
           description: '8,000+',
@@ -77,17 +76,15 @@ class StatsSection extends AppStatelessComponent {
     return div(
       classes: 'flex flex-col gap-y-3 border-l border-white/10 pl-6',
       [
-        DomComponent(
-          tag: 'dt',
+        dt(
           classes: 'text-sm/6',
-          children: [
+          [
             Text(term),
           ],
         ),
-        DomComponent(
-          tag: 'dd',
+        dd(
           classes: 'order-first text-3xl font-semibold tracking-tight',
-          children: [
+          [
             Text(description),
           ],
         ),

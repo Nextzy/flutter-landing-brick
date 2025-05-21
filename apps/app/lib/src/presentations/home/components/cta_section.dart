@@ -29,11 +29,9 @@ class CtaSection extends AppStatelessComponent {
         'aria-hidden': 'true',
       },
       [
-        DomComponent(
-          tag: 'defs',
-          children: [
-            DomComponent(
-              tag: 'pattern',
+        defs(
+          [
+            pattern(
               id: '1d4240dd-898f-445f-932d-e2872fd12de3',
               attributes: {
                 'width': '200',
@@ -42,7 +40,7 @@ class CtaSection extends AppStatelessComponent {
                 'y': '0',
                 'patternUnits': 'userSpaceOnUse',
               },
-              children: [
+              [
                 path(
                   d: 'M.5 200V.5H200',
                   attributes: {
