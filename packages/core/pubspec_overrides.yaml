@@ -1,4 +1,4 @@
-# melos_managed_dependency_overrides: localization,utils,data,network
+# melos_managed_dependency_overrides: data,localization,network,utils
 dependency_overrides:
   data:
     path: ../data

@@ -1,6 +1,6 @@
-# melos_managed_dependency_overrides: utils,network
+# melos_managed_dependency_overrides: network,utils
 dependency_overrides:
-  utils:
-    path: ../utils
   network:
     path: ../network
+  utils:
+    path: ../utils
