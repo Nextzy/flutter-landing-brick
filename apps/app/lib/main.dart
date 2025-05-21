@@ -41,10 +41,10 @@ void main() {
         fontFamily: const FontFamily.list(
             [FontFamily('Roboto'), FontFamilies.sansSerif]),
       ),
-      css('h1').styles(
-        margin: Margin.unset,
-        fontSize: 4.rem,
-      ),
+      // css('h1').styles(
+      //   margin: Margin.unset,
+      //   fontSize: 4.rem,
+      // ),
     ],
     body: Application(),
   ));

@@ -157,7 +157,7 @@ class HeroSection extends AppStatelessComponent {
                 ),
               ],
             ),
-            p(
+            h1(
               classes:
                   'mt-10 text-5xl font-semibold tracking-tight text-pretty text-white sm:text-7xl',
               [text('Deploy to the cloud with confidence')],
