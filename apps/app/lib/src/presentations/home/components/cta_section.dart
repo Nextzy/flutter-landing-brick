@@ -124,7 +124,7 @@ class CtaSection extends AppStatelessComponent {
   Component _buildBackground2() {
     return div(
       classes:
-          'absolute inset-x-0 top-10 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl',
+          'absolute inset-x-0 top-10 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl pointer-events-none',
       attributes: {
         'aria-hidden': 'true',
       },
@@ -139,7 +139,7 @@ class CtaSection extends AppStatelessComponent {
             },
           ),
           [],
-        )
+        ),
       ],
     );
   }
