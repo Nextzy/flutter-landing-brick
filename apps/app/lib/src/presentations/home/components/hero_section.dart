@@ -17,7 +17,6 @@ class HeroSection extends AppStatelessComponent {
         _buildBackground1(),
         _buildBackground2(),
         _buildMainContent(),
-        _buildAppScreenshotImage(),
       ],
     );
   }
@@ -198,6 +197,7 @@ class HeroSection extends AppStatelessComponent {
             ),
           ],
         ),
+        _buildAppScreenshotImage(),
       ],
     );
   }
