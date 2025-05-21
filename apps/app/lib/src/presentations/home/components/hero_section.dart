@@ -16,7 +16,7 @@ class HeroSection extends AppStatelessComponent {
       [
         _buildBackground1(),
         _buildBackground2(),
-        _buildContent(),
+        _buildMainContent(),
         _buildAppScreenshotImage(),
       ],
     );
@@ -102,7 +102,7 @@ class HeroSection extends AppStatelessComponent {
     );
   }
 
-  Component _buildContent() {
+  Component _buildMainContent() {
     return div(
       classes:
           'mx-auto max-w-7xl px-6 pt-10 pb-24 sm:pb-32 lg:flex lg:px-8 lg:py-40',
