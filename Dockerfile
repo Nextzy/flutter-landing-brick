@@ -15,22 +15,22 @@ RUN dart pub get
 
 WORKDIR /app/apps/app
 
-# Build project
-RUN dart pub global run jaspr_cli:jaspr build --verbose
-
-# This image is additionally needed for the dart runtime libs.
-FROM dart:stable as dart
-
-# Use a new empty docker image, this will be the final container image.
-FROM scratch
-
-# Copy all the needed runtime libraries for dart.
-COPY --from=dart /runtime/ /
-# Copy the build outputs for your site.
-COPY --from=build /app/apps/app/build/jaspr/ /app/apps/app/
-
-WORKDIR /app/apps/app
-
-# Start the server.
-EXPOSE 8080
-CMD ["./app"]
+# # Build project
+# RUN dart pub global run jaspr_cli:jaspr build --verbose
+#
+# # This image is additionally needed for the dart runtime libs.
+# FROM dart:stable as dart
+#
+# # Use a new empty docker image, this will be the final container image.
+# FROM scratch
+#
+# # Copy all the needed runtime libraries for dart.
+# COPY --from=dart /runtime/ /
+# # Copy the build outputs for your site.
+# COPY --from=build /app/apps/app/build/jaspr/ /app/apps/app/
+#
+# WORKDIR /app/apps/app
+#
+# # Start the server.
+# EXPOSE 8080
+# CMD ["./app"]
