@@ -1,5 +1,3 @@
-FROM dart:3.7.2
-
 # Use the official dart docker image as our build image.
 FROM ghcr.io/cirruslabs/flutter:stable as build
 
