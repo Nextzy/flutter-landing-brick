@@ -1,0 +1,12 @@
+{
+  "name": "landing",
+  "version": "1.0.0",
+  "scripts": {
+    "build:css": "npx @tailwindcss/cli -i web/styles.tw.css -o web/output.css",
+    "build:web": "npm run build:css && jaspr build",
+    "dev:css": "npx @tailwindcss/cli -i web/styles.tw.css -o web/output.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^0.1.9"
+  }
+}
